@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.content {
+  padding: 25px 10px;
+  background-image: url(img/bg.svg);
+  height: auto;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.page1 {
+  min-height: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.orange {
+  color: #ff5c00;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+  font-family: Nunito;
+
+  font-style: normal;
+  font-weight: 800;
+}
+
+.text h1 {
+  height: 72px;
+  margin-bottom: 25px;
+  line-height: 40px;
+}
+
+.text p {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.container2 {
+  padding: 0 10px;
+  font-family: Nunito;
+  font-weight: 400;
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.burgers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffab08;
+  height: 30px;
+  width: auto;
+  font-size: 12px;
+  border-radius: 50px;
+  gap: 8px;
+  padding: 0 8px;
+}
+.burgers h3,
+.snacks h3,
+.hotdogs h3 {
+  font-weight: 400;
+}
+
+.snacks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 30px;
+  width: auto;
+  font-size: 12px;
+  border-radius: 50px;
+  gap: 8px;
+  padding: 0 8px;
+}
+.hotdogs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 30px;
+  width: auto;
+  font-size: 12px;
+  border-radius: 50px;
+  gap: 8px;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+.cart {
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  padding: 16px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.carttxt {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.cart p {
+  width: 32px;
+  height: 16px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #f2f2f3;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.container3 {
+  padding: 0 10px;
+  font-family: Nunito;
+  font-weight: 400;
+  padding-bottom: 80px;
+}
+
+.menutitle {
+  margin-bottom: 15px;
+  color: #000;
+  font-family: Nunito;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 33.6px */
+}
+/*---------------------------------*/
+.card {
+  background-color: white;
+  width: 145px;
+  height: 243px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  padding: 4px;
+  margin-bottom: 7px;
+}
+
+.price {
+  color: #000;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+  margin-bottom: 7px;
+  padding-left: 4px;
+}
+.discriptoin {
+  color: #000;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 15.6px */
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+.weight {
+  color: #b1b1b1;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 15.6px */
+  padding-left: 4px;
+  margin-bottom: 4px;
+}
+.add {
+  color: #000;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+
+  width: 137px;
+  height: 30px;
+  border-radius: 8px;
+  background: #f2f2f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.menuburgers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footer {
+  width: 100%;
+  height: 318px;
+  background-color: white;
+  padding: 30px 10px;
+  font-family: Nunito;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer h3 {
+  color: #000;
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 18px */
+}
+
+.fnumimg {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.fnumimg p {
+  color: #000;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 15.6px */
+}
+
+.fsocimg {
+  display: flex;
+  gap: 16px;
+}
+
+.fnum,
+.fsoc {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 9px;
+}
+
+.fbot {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2px;
+}
+
+.fsoc {
+  margin-bottom: 13px;
+}
+
+.fbot p {
+  color: #000;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
